@@ -1,0 +1,4 @@
+result: allure serve allure-results
+report: allure generate -c ./allure-results -o ./allure-report
+test_ui:  pytest -v tests/test_auth_page.py --alluredir allure-results
+test_ui2:  pytest -v tests/tests_auth_negative.py --alluredir allure-results
